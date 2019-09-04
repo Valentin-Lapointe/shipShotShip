@@ -17,6 +17,13 @@ const SearchStackNavigator = createStackNavigator({
     }
   },
 },
+
+/*enlever tout les header*/
+
+{
+    headerMode: 'none'
+}
+
 )
 
 export default createAppContainer(SearchStackNavigator)
