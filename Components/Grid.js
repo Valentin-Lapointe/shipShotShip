@@ -8,6 +8,7 @@ export default class Game extends React.Component {
   }
 
   render() {
+
     return (
         <View
             style={gameStyles.grid}>
@@ -21,7 +22,7 @@ export default class Game extends React.Component {
                             return (
                                 <TouchableOpacity
                                     onPress={() => {
-                                      this.props.onPressCell(this.props.grid, indexRow, indexCol)
+                                      this.props.onPressCell(indexRow, indexCol)
                                     }}
                                     style={[gameStyles.cell, {backgroundColor: cell.bColor}]}>
                                   <Text>{cell.content}</Text>
