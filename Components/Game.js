@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Modal} from 'react-native';
+import {StyleSheet, View, Modal} from 'react-native';
 import {gameStyles} from "../styles/gameStyles";
 import Grid from './Grid.js';
 import Score from './Score';
