@@ -2,13 +2,16 @@ import React from 'react';
 import {View, Modal} from 'react-native';
 import {gameStyles} from "../styles/gameStyles";
 import Grid from './Grid.js';
+import Score from './Score';
+
 
 export default class Game extends React.Component {
   constructor() {
     super();
     this.state = {
       gridP1: [],
-      gridP2: []
+      gridP2: [],
+      modalVisible: false
     };
 
     this.props = {
@@ -38,17 +41,20 @@ export default class Game extends React.Component {
   };
 
   render() {
-    // const {navigate} = this.props.navigation;
+    const {navigate} = this.props.navigation;
 
     return (
         <View style={gameStyles.container}>
+          <Score/>
           <Grid
               grid={this.state.gridP1}
               onPressCell={this.onPressCell}
           />
           <Modal
+              visible={this.state.modalVisible}
               animationType="slide"
               transparent={false}>
+            <Score/>
             <Grid
                 grid={this.state.gridP2}
                 onPressCell={this.onPressCell}
@@ -60,3 +66,4 @@ export default class Game extends React.Component {
   }
 }
 
+const styles = StyleSheet.create({});
