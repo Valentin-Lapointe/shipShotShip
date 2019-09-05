@@ -4,10 +4,15 @@ export const gameStyles = StyleSheet.create({
   container: {
     width: '100%',
     height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: '#EEE'
   },
+  gridContainer: {
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor: '#EEE'
+  },
+
   grid: {
     padding: 'auto',
     width: 300,

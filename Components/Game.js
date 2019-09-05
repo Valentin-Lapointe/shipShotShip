@@ -46,10 +46,12 @@ export default class Game extends React.Component {
     return (
         <View style={gameStyles.container}>
           <Score/>
-          <Grid
-              grid={this.state.gridP1}
-              onPressCell={this.onPressCell}
-          />
+          <View style={gameStyles.gridContainer}>
+            <Grid
+                grid={this.state.gridP1}
+                onPressCell={this.onPressCell}
+            />
+          </View>
           <Modal
               visible={this.state.modalVisible}
               animationType="slide"
